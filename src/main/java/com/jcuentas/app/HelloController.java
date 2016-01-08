@@ -27,8 +27,8 @@ public class HelloController {
         return "Hello "+ name;
     }
 
-    public static void main(String[] args) {
-        SpringApplication.run(HelloController.class, args);
-    }
+//    public static void main(String[] args) {
+//        SpringApplication.run(HelloController.class, args);
+//    }
 
 }
