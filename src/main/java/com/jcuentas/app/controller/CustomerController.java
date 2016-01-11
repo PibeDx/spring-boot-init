@@ -1,12 +1,13 @@
 package com.jcuentas.app.controller;
 
 import com.jcuentas.app.model.Customer;
+import org.hibernate.validator.constraints.ParameterScriptAssert;
+import org.springframework.core.env.SystemEnvironmentPropertySource;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,50 @@ public class CustomerController {
 
     @RequestMapping(value = "", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public List<Customer> getAllCustomerss(){
-        return list;
+    public ResponseEntity addCustomer(@RequestBody Customer customer){
+        list.add(customer);
+        return new ResponseEntity(HttpStatus.CREATED);
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+    @ResponseBody
+    public ResponseEntity<Customer> updateCustomer(@PathVariable("id") Long id, @RequestBody Customer customer){
+        for(Customer c: list){
+            if (c.getId().equals(id)){
+                System.out.println("+: "+id );
+                c.setName(customer.getName());
+                return new ResponseEntity<Customer>(customer, HttpStatus.OK);
+            }
+        }
+//        list.stream().filter(cu->cu.getId()==id).collect(Collectors.<Customer>toList());
+        return new ResponseEntity<Customer>(HttpStatus.BAD_REQUEST);
+    }
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    @ResponseBody
+    public void deleteCustomer(@PathVariable("id") Long id){
+        Customer rCust=null;
+        for(Customer c:list){
+            if (c.getId().equals(id)){
+                rCust =c;
+            }
+        }
+        if (rCust==null) {
+            throw new CustomerNotFoundException();
+        }else{
+            list.remove(rCust);
+        }
+
+    }
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public Customer getCustomer(@PathVariable("id") Long id){
+        Customer customer=null;
+        for (Customer c: list){
+            if (c.getId().equals(id)){
+                System.out.println("asdasd");
+                return c;
+            }
+        }
+        throw new CustomerNotFoundException();
     }
 }
