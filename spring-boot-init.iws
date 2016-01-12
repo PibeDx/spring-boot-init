@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1c81acf-4063-46a0-a229-8cd2340553c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jcuentas/app/controller/SimpleCORSFilter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/jcuentas/app/controller/CustomerNotFoundException.java" afterPath="$PROJECT_DIR$/src/main/java/com/jcuentas/app/exception/CustomerNotFoundException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-boot-init.iml" afterPath="$PROJECT_DIR$/spring-boot-init.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-boot-init.ipr" afterPath="$PROJECT_DIR$/spring-boot-init.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-boot-init.iws" afterPath="$PROJECT_DIR$/spring-boot-init.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jcuentas/app/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/jcuentas/app/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jcuentas/app/controller/CustomerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/jcuentas/app/controller/CustomerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/jcuentas/app/RestClientIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/jcuentas/app/RestClientIntegrationTest.java" />
     </list>
     <ignored path="spring-boot-init.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1117,7 +1110,13 @@
       <option name="project" value="LOCAL" />
       <updated>1452552044711</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Mejora de RestClientTest, implementacion de swagger.">
+      <created>1452638317616</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1452638317616</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1207,7 +1206,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implementacion de crud" />
     <MESSAGE value="implementacion de junit" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementacion de junit" />
+    <MESSAGE value="Mejora de RestClientTest, implementacion de swagger." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mejora de RestClientTest, implementacion de swagger." />
   </component>
   <component name="VssConfiguration">
     <CheckoutOptions>
