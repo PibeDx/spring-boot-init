@@ -1,8 +1,7 @@
 package com.jcuentas.app.controller;
 
+import com.jcuentas.app.exception.CustomerNotFoundException;
 import com.jcuentas.app.model.Customer;
-import org.hibernate.validator.constraints.ParameterScriptAssert;
-import org.springframework.core.env.SystemEnvironmentPropertySource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
