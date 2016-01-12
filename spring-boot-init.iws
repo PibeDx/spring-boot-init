@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1c81acf-4063-46a0-a229-8cd2340553c9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-boot-init.iws" afterPath="$PROJECT_DIR$/spring-boot-init.iws" />
     </list>
     <ignored path="spring-boot-init.iws" />
@@ -1116,7 +1115,13 @@
       <option name="project" value="LOCAL" />
       <updated>1452638317616</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Mejora de RestClientTest, implementacion de swagger.">
+      <created>1452638356891</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1452638356891</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
