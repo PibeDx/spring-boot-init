@@ -16,14 +16,13 @@ import java.util.List;
  * Created by jcuentas on 11/01/2016.
  */
 public class RestClientIntegrationTest extends Assert{
-
+/*
     RestTemplate template = new RestTemplate();
 
     private static final String BASE_URI = "http://localhost:8080/customers";
 
     @Test
     public void test_get_all_customers_getForObject(){
-//        RestTemplate template = new RestTemplate();
         List<Customer> list = template.getForObject(BASE_URI, List.class);
         assertNotNull(list);
     }
@@ -37,8 +36,6 @@ public class RestClientIntegrationTest extends Assert{
     @Test(expected = HttpClientErrorException.class)
     public void test_delete_operation_failed_exception(){
         ResponseEntity<String> response = template.exchange("http://localhost:8080/customers/100", HttpMethod.DELETE, null,String.class);
-//        System.out.println(""+response.getStatusCode().is4xxClientError());
-//        System.out.println(""+response.getStatusCode());
         assertTrue(response.getStatusCode().is2xxSuccessful());
     }
 
@@ -47,7 +44,5 @@ public class RestClientIntegrationTest extends Assert{
         template.delete("http://localhost:8080/customers/1");
         ResponseEntity<Customer> response = template.getForEntity("http://localhost:8080/customers/1", Customer.class);
     }
-
-
-
+    */
 }
